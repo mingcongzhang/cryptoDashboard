@@ -10,7 +10,7 @@ version 3.1.1
  npm install
  ```
  
-2. Launch development server, and open `localhost:4200` in your browser:
+2. Launch development server, and open `localhost:5200` in your browser:
  ```sh
  npm start
  ```
@@ -48,7 +48,7 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 
 Task                            | Description
 --------------------------------|--------------------------------------------------------------------------------------
-`npm start`                     | Run development server on `http://localhost:4200/`
+`npm start`                     | Run development server on `http://localhost:5200/`
 `npm run build [-- --env=prod]` | Lint code and build web app for production (with [AOT](https://angular.io/guide/aot-compiler)) in `dist/` folder
 `npm test`                      | Run unit tests via [Karma](https://karma-runner.github.io) in watch mode
 `npm run test:ci`               | Lint code and run unit tests once for continuous integration
@@ -64,7 +64,7 @@ The default build environment is `prod`.
 
 ## Development server
 
-Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change
+Run `npm start` for a dev server. Navigate to `http://localhost:5200/`. The app will automatically reload if you change
 any of the source files.
 You should not use `ng serve` directly, as it does not use the backend proxy configuration by default.
 

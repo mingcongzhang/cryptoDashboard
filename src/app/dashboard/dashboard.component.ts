@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PublicDataService} from './publicData.service';
+import {finalize} from 'rxjs/operators';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,8 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  isLoading: boolean;
+  marketData: any;
 
-  ngOnInit() { }
+  constructor(private publicData: PublicDataService) { }
+
+  ngOnInit() {
+    this.isLoading = true;
+    this.publicData.getMarketData()
+      .pipe(finalize(() => {this.isLoading = false; }))
+      .subscribe((data: object) => { this.marketData = data; });
+  }
 
 }

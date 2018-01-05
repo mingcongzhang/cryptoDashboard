@@ -3,9 +3,8 @@
     <h1>
       <span translate>APP_NAME</span>
     </h1>
-    <p>
-      dashboard works!
-    </p>
+    <app-loader [isLoading]="isLoading"></app-loader>
+    <pre>{{marketData|json}}</pre>
   </div>
 </div>
 
