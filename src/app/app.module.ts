@@ -13,6 +13,7 @@ import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';
+import {DashboardModule} from './dashboard/dashboard.module';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { LoginModule } from './login/login.module';
     HomeModule,
     AboutModule,
     LoginModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DashboardModule
   ],
   declarations: [AppComponent],
   providers: [
